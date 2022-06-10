@@ -1,0 +1,34 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Michiko_Portfolio
+ */
+
+?>
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf( esc_html__( 'Created by %2$s.', 'michiko-portfolio' ), 'michiko-portfolio', '<a href="https://michikohasegawa.com/">Michiko Hasegawa</a>' );
+			?>
+		</div><!-- .site-info -->
+		<div>
+			<nav id="social-navigation" class="social-navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) );
+			 ?>
+			</nav>
+		</div>
+		
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
