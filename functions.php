@@ -177,3 +177,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Custome Post Type & Taxonomies
+ */
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+
