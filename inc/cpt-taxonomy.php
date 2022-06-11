@@ -54,27 +54,23 @@
         //         'placeholder' => 'Add Link...',
         //     ) ),
         // ),
-        'template' => array(
-            array( 'core/image', array(
-                'align' => 'left',
-            ) ),
-            array( 'core/heading', array(
-                'placeholder' => 'Add Work Title',
-            ) ),
-            array( 'core/list', array(
-                'placeholder' => 'Add Tools'
-
-            ) ),
-            array( 'core/button', array(
-                'placeholder' => 'Add GitHub Link...',
-            ) ),
-            array( 'core/button', array(
-                'placeholder' => 'Add Live Link...',
-            ) ),
-            array( 'core/paragraph', array(
-                'placeholder' => 'Add Discription',
-            ) ),
-        ),
+        // 'template' => array(
+        //     array( 'core/list', array(
+        //         'placeholder' => 'Add Tools'
+        //     ) ),
+        //     array( 'core/button', array(
+        //         'placeholder' => 'Add a Link for See Details'
+        //     ) ),
+        //     array( 'core/button', array(
+        //         'placeholder' => 'Add GitHub Link...',
+        //     ) ),
+        //     array( 'core/button', array(
+        //         'placeholder' => 'Add Live Link...',
+        //     ) ),
+        //     array( 'core/paragraph', array(
+        //         'placeholder' => 'Add Description',
+        //     ) ),
+        // ),
     );
     register_post_type( 'portfolio-work', $args );
 }

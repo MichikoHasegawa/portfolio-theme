@@ -182,4 +182,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/cpt-taxonomy.php';
 
-
+/**
+ * Remove Archive Title Prefix
+ */
+add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
