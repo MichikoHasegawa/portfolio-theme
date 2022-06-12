@@ -51,53 +51,26 @@ get_header();
 				<?php
 				while( $query->have_posts()) {
 					$query->the_post();
-
+					// Display the Image
 					the_post_thumbnail();
+					//Display the title
 					?>
 					<a href="<?php the_permalink(); ?>"><h2><?php the_title() ?></h2></a>
 					<?php
-					// Deplaying the Tool List
+					// Diplaying the Tool List
 					if (function_exists ( 'get_field')) {
 						if (get_field('tool_list')) {
 							echo '<p>'.get_field('tool_list');
 							'<p>';
 						}
 					}
+					// Display See Details Button
+					?>
+					<a href="<?php the_permalink(); ?>"><?php esc_html_e('See SDetails', 'portfolio'); ?></a>
+					<?php
 
-					// Displaying the Links
-					if (get_field('github')) {
-						$githubLink = get_field('github');
-
-						if($githubLink){
-							$github_url = $githubLink['url'];
-							$github_title = $githubLink['title'];
-							$github_target = $githubLink['target'] ? $githubLink['target'] : '_self';
-						
-						?>
-						<a class="github-link" href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php echo esc_html($github_title); ?></a>
-						<?php
-						}
-					}
-
-					if (get_field('live')) {
-						$liveLink = get_field('live');
-
-						if($liveLink){
-							$live_url = $liveLink['url'];
-							$live_title = $liveLink['title'];
-							$live_target = $liveLink['target'] ? $liveLink['target'] : '_self';
-						?>
-						<a class="live-link" href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php echo esc_html($live_title); ?></a>
-						<?php
-						}
-					}
-					// Displaying the Description 
-					if (function_exists ( 'get_field')) {
-						if (get_field('description')) {
-							echo '<p>'.get_field('description');
-							'<p>';
-						}
-					}
+					
+					
 				}?>
 
 				<?php
@@ -111,6 +84,7 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+
 		?>
 
 	</main><!-- #main -->
