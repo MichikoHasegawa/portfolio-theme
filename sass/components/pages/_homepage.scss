@@ -1,44 +1,43 @@
 .site-main {
+  .entry-content {
+    // background-color: $light-yellow;
+    // margin: 0.5rem 0.5rem 0 0.5rem;
+  }
+  .entry-content h1 {
+    background-color: $red;
+    color: $white;
+    padding: 6rem 0;
+    text-align: center;
+  }
 
-    .entry-content {
-        background-color: $light-yellow;
-        margin: .5rem .5rem 0 .5rem;
-    }
-    .entry-content h1{
-        background-color: $red;
-        color: $white;
-        padding: 6rem 0;
-        text-align: center;
-    }
-    
-    p {
-        text-align: center;
-        margin: 3rem 0;
-    }
+  p {
+    text-align: center;
+    margin: 3rem 0;
+  }
 
-    .wp-block-buttons {
-        display: flex;
-        justify-content: center;
-    }
+  .wp-block-buttons {
+    display: flex;
+    justify-content: center;
+  }
 
-    .wp-block-button__link {
-        background-color: $light-yellow;
-        color: $black;
-        border: 2px solid $black;
-        border-radius: 0px;
-        padding: .5rem;
-        font-size: 1rem;
-        margin-bottom: 3rem;
-        }
-    
-        // section {
-        //     margin: 0;
-        //     background-color: $light-yellow;
-        // }
-        .contact-wrapper {
-            margin: 0 .5rem;
-            padding: 0 0 3rem 0;
-            background-color: $light-yellow;
-            
-        }
+  .wp-block-button__link {
+    background-color: $light-yellow;
+    color: $black;
+    border: 2px solid $black;
+    border-radius: 0px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  // section {
+  //     margin: 0;
+  //     background-color: $light-yellow;
+  // }
+
+  //   .contact-wrapper {
+  //     margin: 0 0.5rem;
+  //     padding: 0 0 3rem 0;
+  //     background-color: $light-yellow;
+  //   }
 }

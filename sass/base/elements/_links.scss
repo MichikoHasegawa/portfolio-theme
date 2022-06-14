@@ -1,34 +1,34 @@
 a {
-	color: $color__link;
+  color: $red;
 
-	&:visited {
-		color: $color__link-visited;
-	}
+  &:visited {
+    color: $red;
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
 
-	&:focus {
-		outline: thin dotted;
-	}
+  &:focus {
+    outline: thin dotted;
+  }
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 .site-info a {
-    text-decoration: none;
-	color: $black;
+  text-decoration: none;
+  color: $black;
 }
 
 .menu {
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	gap: .5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
