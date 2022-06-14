@@ -18,13 +18,6 @@
 			printf( esc_html__( 'Created by %2$s.', 'michiko-portfolio' ), 'michiko-portfolio', '<a href="https://michikohasegawa.com/">Michiko Hasegawa</a>' );
 			?>
 		</div><!-- .site-info -->
-		<div>
-			<nav id="social-navigation" class="social-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) );
-			 ?>
-			</nav>
-		</div>
-		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

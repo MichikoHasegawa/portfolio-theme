@@ -73,7 +73,10 @@ get_header();
 			endif;
 
 			endwhile; // End of the loop.
-		?>
+		
+
+			get_template_part( 'template-parts/content', 'contact' );
+			?>
 
 	</main><!-- #main -->
 

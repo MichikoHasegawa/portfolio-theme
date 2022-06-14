@@ -48,19 +48,47 @@ get_header();
 				
 				if (function_exists ( 'get_field')) {
 		
-
-					if(get_field('about_me_description')) {
-						echo '<p>'.get_field('about_me_description'); '</p>';
-					};
-
 					if(get_field('name')) {
-						echo '<h2>'.get_field('name'); '</h2>';
+						echo '<h1>'.get_field('name'). '</h1>';
 					};
 
 					if(get_field('about_me_description')) {
-						echo '<p>'.get_field('about_me_description'); '</p>';
+						echo '<p>'.get_field('about_me_description'). '</p>';
 					};
 				}
+
+				// Diplaying the Development Tool 
+				if ( function_exists ( 'get_field' )) {
+					if ( get_field('development_tools')) {
+						echo '<h2>' .get_field('development_tools').'</h2>';
+					}
+				}
+				// Diplaying the Development Tool List
+				$tools = get_field('development_tool_items');
+				if( $tools ): ?>
+				<ul>
+				<?php foreach( $tools as $tool ): ?>
+				<li><?php echo $tool; ?></li>
+				<?php endforeach; ?>
+				</ul>
+				<?php endif; 
+
+				// Diplaying the Design Tool 
+				if ( function_exists ( 'get_field' )) {
+					if ( get_field('design_items')) {
+						echo '<h2>' .get_field('design_items').'</h2>';
+					}
+				}
+
+				// Diplaying the Design Tool List
+				$tools = get_field('design_tool_itmes');
+				if( $tools ): ?>
+				<ul>
+				<?php foreach( $tools as $tool ): ?>
+				<li><?php echo $tool; ?></li>
+				<?php endforeach; ?>
+				</ul>
+				<?php endif; 
 				
 			}?>
 

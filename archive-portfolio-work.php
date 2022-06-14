@@ -51,33 +51,36 @@ get_header();
 				<?php
 				while( $query->have_posts()) {
 					$query->the_post();
+
 					// Display the Image
 					the_post_thumbnail();
+
 					//Display the title
 					?>
 					<a href="<?php the_permalink(); ?>"><h2><?php the_title() ?></h2></a>
 					<?php
+
 					// Diplaying the Tool List
-					if (function_exists ( 'get_field')) {
-						if (get_field('tool_list')) {
-							echo '<p>'.get_field('tool_list');
-							'<p>';
-						}
-					}
+					$tools = get_field('tools');
+					if( $tools ): ?>
+					<ul>
+					<?php foreach( $tools as $tool ): ?>
+					<li><?php echo $tool; ?></li>
+					<?php endforeach; ?>
+					</ul>
+					<?php endif; 
+				
 					// Display See Details Button
 					?>
-					<a href="<?php the_permalink(); ?>"><?php esc_html_e('See SDetails', 'portfolio'); ?></a>
+					<a href="<?php the_permalink(); ?>"><?php esc_html_e('See Details', 'portfolio'); ?></a>
 					<?php
-
-					
-					
-				}?>
-
-				<?php
+				}
 				echo '</section>';
 				wp_reset_postdata();
 
 			};
+
+			get_template_part( 'template-parts/content', 'contact' );
 
 		else :
 

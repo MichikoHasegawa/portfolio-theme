@@ -19,3 +19,18 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.contact-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap:1rem;
+	margin: 3rem 0;
+}
+
+.contact-wrapper svg {
+	fill: $red;
+	height: 2.5rem;
+	width: 2.5rem;
+}
+

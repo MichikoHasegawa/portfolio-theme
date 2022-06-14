@@ -404,11 +404,11 @@ h6 {
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 h3 {
@@ -417,6 +417,7 @@ h3 {
 
 p {
 	margin-bottom: 1.5em;
+	font-size: 1.25rem;
 }
 
 dfn,
@@ -471,6 +472,7 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
+	color: #2c2c2c;
 }
 
 hr {
@@ -546,6 +548,18 @@ a:hover, a:active {
 	outline: 0;
 }
 
+.site-info a {
+	text-decoration: none;
+	color: #2c2c2c;
+}
+
+.menu {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -574,6 +588,20 @@ input[type=reset]:focus,
 input[type=submit]:active,
 input[type=submit]:focus {
 	border-color: #aaa #bbb #bbb;
+}
+
+.contact-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+	margin: 3rem 0;
+}
+
+.contact-wrapper svg {
+	fill: #ee4926;
+	height: 2.5rem;
+	width: 2.5rem;
 }
 
 input[type=text],
@@ -845,6 +873,43 @@ footer svg {
 	display: block;
 }
 
+/* Homepage
+--------------------------------------------- */
+.site-main .entry-content {
+	background-color: #fdfbe8;
+	margin: 0.5rem 0.5rem 0 0.5rem;
+}
+.site-main .entry-content h1 {
+	background-color: #ee4926;
+	color: #fff;
+	padding: 6rem 0;
+	text-align: center;
+}
+.site-main p {
+	text-align: center;
+	margin: 3rem 0;
+}
+.site-main .wp-block-buttons {
+	display: flex;
+	justify-content: center;
+}
+.site-main .wp-block-button__link {
+	background-color: #fdfbe8;
+	color: #2c2c2c;
+	border: 2px solid #2c2c2c;
+	border-radius: 0px;
+	padding: 0.5rem;
+	font-size: 1rem;
+	margin-bottom: 3rem;
+}
+.site-main .contact-wrapper {
+	margin: 0 0.5rem;
+	padding: 0 0 3rem 0;
+	background-color: #fdfbe8;
+}
+
+/* Homepage
+--------------------------------------------- */
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

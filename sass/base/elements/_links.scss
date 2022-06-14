@@ -20,3 +20,15 @@ a {
 		outline: 0;
 	}
 }
+
+.site-info a {
+    text-decoration: none;
+	color: $black;
+}
+
+.menu {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+}
