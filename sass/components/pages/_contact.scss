@@ -1,0 +1,38 @@
+.archive .contact-wrapper,
+.single .contact-wrapper,
+.page-id-47 .contact-wrapper {
+  background-color: $white;
+}
+
+.contact-wrapper svg {
+  fill: $red;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.contact-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+
+  p {
+      text-align: center;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-btn {
+    background-color: $light-yellow;
+    border: 2px solid $red;
+    padding: 0.1rem .5rem;
+}
+
+.li {
+  border: none;
+}

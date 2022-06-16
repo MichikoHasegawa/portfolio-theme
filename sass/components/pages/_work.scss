@@ -1,0 +1,42 @@
+// Work Archive Page
+
+.post-type-archive-portfolio-work {
+  .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details {
+    margin-bottom: 8rem;
+    border-bottom: 3px solid $red;
+  }
+}
+
+
+// Work Single Page
+.single-portfolio-work {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .link {
+    text-align: center;
+    margin-bottom: 3rem;s
+
+    a {
+      border-bottom: 2px solid $red;
+    }
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+}

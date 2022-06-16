@@ -4,14 +4,16 @@ body {
 }
 
 .site {
-  // max-width: 62.5rem;
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 }
 
 main {
   background-color: $light-yellow;
   flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

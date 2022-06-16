@@ -24,11 +24,6 @@ input[type="submit"] {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-}
-
-.contact-wrapper svg {
-  fill: $red;
-  height: 2.5rem;
-  width: 2.5rem;
 }

@@ -69,15 +69,17 @@
 }
 
 // /* Small menu. */
-// .menu-toggle,
-// .main-navigation.toggled ul {
-//     display: block;
-// }
-
-// @media screen and (min-width: 37.5em) {
-.menu-toggle {
+.menu-toggle,
+.main-navigation.toggled ul {
   display: none;
 }
+
+// @media screen and (min-width: 37.5em) {
+// .menu-toggle {
+// display: none;
+// display: block;
+// }
+// }
 
 .menu-main-menu-container {
   text-align: center;
@@ -115,7 +117,12 @@
 body {
   position: relative;
 }
+
 .site-header {
+  background-color: $light-yellow;
+  // height: 4rem;
+  // margin-top: 5rem;
+  // padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -123,8 +130,14 @@ body {
   justify-content: center;
   align-items: center;
   border-top: 2px solid $red;
-  background-color: $light-yellow;
-  height: 3rem;
+
+  li {
+    border: none;
+  }
+
+  a {
+    color: $red;
+  }
 }
 
 .menu svg {

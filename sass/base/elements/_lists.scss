@@ -1,26 +1,52 @@
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 3em;
 }
 
 ul {
-	list-style: disc;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
 }
 
 ol {
-	list-style: decimal;
+  list-style: decimal;
 }
 
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+  margin-bottom: 0;
+  margin-left: 1.5em;
 }
 
 dt {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+  margin: 0 1.5em 1.5em;
+}
+
+// Contact Section
+.post-type-archive-portfolio-work,
+.single-portfolio-work {
+  ul {
+    margin-top: 3rem;
+  }
+
+  li {
+    color: $gray;
+    border: 2px solid $gray;
+    border-radius: 5px;
+    padding: 0 0.2rem;
+  }
+}
+
+.contact-wrapper li {
+  border: none;
 }

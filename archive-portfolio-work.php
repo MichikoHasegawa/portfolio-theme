@@ -53,7 +53,7 @@ get_header();
 					$query->the_post();
 
 					// Display the Image
-					the_post_thumbnail();
+					the_post_thumbnail('work-archive-img');
 
 					//Display the title
 					?>
@@ -72,7 +72,7 @@ get_header();
 				
 					// Display See Details Button
 					?>
-					<a href="<?php the_permalink(); ?>"><?php esc_html_e('See Details', 'portfolio'); ?></a>
+					<a class="details" href="<?php the_permalink(); ?>"><?php esc_html_e('See Details', 'portfolio'); ?></a>
 					<?php
 				}
 				echo '</section>';
