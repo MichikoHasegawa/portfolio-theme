@@ -11,13 +11,14 @@
 
   p {
     text-align: center;
-    margin: 3rem 0;
+    margin: 3rem auto;
   }
 
   .wp-block-button__link {
     background-color: $light-yellow;
     color: $black;
-    border: 2px solid $black;
+    font-weight: 500;
+    border: 2px solid $red;
     border-radius: 0px;
     padding: 0.5rem;
     font-size: 1rem;
@@ -31,5 +32,17 @@
 
   .contact-wrapper {
     flex-direction: row;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  svg {
+    fill: $red;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }

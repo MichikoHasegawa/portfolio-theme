@@ -6,6 +6,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // border-bottom: 2px solid $yellow;
+  }
+
+  .work:nth-child(odd) {
+    background-color: $white;
+  }
+
+  .size-work-archive-img {
+    padding: 3rem 1rem;
   }
 
   .details {
@@ -14,29 +23,26 @@
   }
 }
 
-
 // Work Single Page
 .single-portfolio-work {
   img {
     display: block;
     margin: 0 auto;
-  }
-
-  h2 {
-    text-align: center;
+    // text-align: center;
   }
 
   .link {
     text-align: center;
-    margin-bottom: 3rem;s
-
+    margin-bottom: 2.5rem;
     a {
       border-bottom: 2px solid $red;
+      margin-right: 1rem;
     }
-  }
 
-  p {
-    margin: 0 auto;
-    max-width: 30rem;
+    p {
+      // margin: 0 auto;
+      // max-width: 30rem;
+      margin-bottom: 3rem;
+    }
   }
 }

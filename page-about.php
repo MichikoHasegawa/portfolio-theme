@@ -53,44 +53,53 @@ get_header();
 					};
 
 					if(get_field('about_me_description')) {
-						echo '<p>'.get_field('about_me_description'). '</p>';
+						echo '<p class="about-description">'.get_field('about_me_description'). '</p>';
 					};
 				}
-
-				// Diplaying the Development Tool 
-				if ( function_exists ( 'get_field' )) {
-					if ( get_field('development_tools')) {
-						echo '<h2>' .get_field('development_tools').'</h2>';
+				?>
+				<section>
+				<!-- Diplaying the Development Tool  -->
+					<div>
+					<?php
+					if ( function_exists ( 'get_field' )) {
+						if ( get_field('development_tools')) {
+							echo '<h2>' .get_field('development_tools').'</h2>';
+						}
 					}
-				}
-				// Diplaying the Development Tool List
-				$tools = get_field('development_tool_items');
-				if( $tools ): ?>
-				<ul>
-				<?php foreach( $tools as $tool ): ?>
-				<li><?php echo $tool; ?></li>
-				<?php endforeach; ?>
-				</ul>
-				<?php endif; 
+					// Diplaying the Development Tool List
+					$tools = get_field('development_tool_items');
+					if( $tools ): ?>
+						<ul class="tool-list">
+						<?php foreach( $tools as $tool ): ?>
+							<li><?php echo $tool; ?></li>
+						<?php endforeach; ?>
+						</ul>
+					</div>
+					<?php endif; ?>
 
-				// Diplaying the Design Tool 
-				if ( function_exists ( 'get_field' )) {
-					if ( get_field('design_items')) {
-						echo '<h2>' .get_field('design_items').'</h2>';
+					<!-- Diplaying the Design Tool  -->
+					<div>
+					<?php
+					if ( function_exists ( 'get_field' )) {
+						if ( get_field('design_items')) {
+							echo '<h2>' .get_field('design_items').'</h2>';
+						}
 					}
-				}
 
-				// Diplaying the Design Tool List
-				$tools = get_field('design_tool_itmes');
-				if( $tools ): ?>
-				<ul>
-				<?php foreach( $tools as $tool ): ?>
-				<li><?php echo $tool; ?></li>
-				<?php endforeach; ?>
-				</ul>
-				<?php endif; 
-				
-			}?>
+					// Diplaying the Design Tool List
+					$tools = get_field('design_tool_itmes');
+					if( $tools ): ?>
+						<ul class="tool-list">
+						<?php foreach( $tools as $tool ): ?>
+							<li><?php echo $tool; ?></li>
+						<?php endforeach; ?>
+						</ul>
+						<?php endif; 
+						?>
+					</div>
+			<?php } ?>
+
+			</section>
 
 			<?php
 			echo '</section>';

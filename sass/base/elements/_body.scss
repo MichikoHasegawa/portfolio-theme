@@ -1,13 +1,21 @@
 body {
   background: $color__background-body; // Fallback for when there is no custom
   color: $black;
+  .site-info {
+    display: none;
+  }
+
+  @media screen and (min-width: 50em) {
+    .site-info {
+      display: inline-block;
+    }
+  }
 }
 
 .site {
   margin: 0 auto;
   min-height: 100vh;
-  // display: flex;
-  // flex-direction: column;
+  background-color: $light-yellow;
 }
 
 main {

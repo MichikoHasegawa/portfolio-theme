@@ -47,11 +47,12 @@ get_header();
 			$query = new WP_Query( $args );
 			if( $query -> have_posts() ) {
 				?>
-				<section class="work">
 				<?php
 				while( $query->have_posts()) {
 					$query->the_post();
-
+					?>
+					<section class="work">
+					<?php
 					// Display the Image
 					the_post_thumbnail('work-archive-img');
 
@@ -74,8 +75,9 @@ get_header();
 					?>
 					<a class="details" href="<?php the_permalink(); ?>"><?php esc_html_e('See Details', 'portfolio'); ?></a>
 					<?php
+					echo '</section>';
 				}
-				echo '</section>';
+				
 				wp_reset_postdata();
 
 			};

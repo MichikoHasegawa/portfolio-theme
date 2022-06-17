@@ -2,37 +2,45 @@
 .single .contact-wrapper,
 .page-id-47 .contact-wrapper {
   background-color: $white;
-}
-
-.contact-wrapper svg {
-  fill: $red;
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.contact-wrapper {
   flex-direction: column;
   justify-content: center;
-  padding: 4rem;
+  border-top: 2px solid $yellow;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
 
   p {
-      text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 4rem auto 1rem;
   }
-}
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  .contact-btn {
+    background-color: $yellow;
+    color: $gray;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 1rem;
+  }
 
-.contact-btn {
-    background-color: $light-yellow;
-    border: 2px solid $red;
-    padding: 0.1rem .5rem;
-}
+  .contact-social-icons {
+    margin: 3rem 0 5rem 0;
+  }
+  li {
+    border: none;
+  }
 
-.li {
-  border: none;
+  svg {
+    fill: $red;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }

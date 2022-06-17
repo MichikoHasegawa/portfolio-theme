@@ -161,7 +161,7 @@ function michiko_portfolio_scripts() {
 
 	wp_enqueue_style(
 		'fwd-google-fonts', // unique handle
-		'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap', // path to css file, 
+		'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap', // path to css file, 
 		array(), // dependancies
 		null, // version (null required for Google Fonts)
 		'all', // media
