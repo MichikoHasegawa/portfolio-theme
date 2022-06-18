@@ -15,12 +15,25 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			// Display the thumbnail
-			the_post_thumbnail('work-single-img');
-			//Display the title
+			
+			if (get_field('live')) {
+				$liveLink = get_field('live');
+
+				if($liveLink){
+					$live_url = $liveLink['url'];
+					$live_title = $liveLink['title'];
+					$live_target = $liveLink['target'] ? $liveLink['target'] : '_self';
+				}
+			}
 			?>
-			<a href="<?php the_permalink(); ?>"><h2><?php the_title() ?></h2></a>
+			<!-- Display the thumbnail -->
+			<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_post_thumbnail('work-single-img'); ?></a>
+
+			<!-- Display the title -->
+			<h2><a href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_title(); ?></a></h2>
+
 			<?php
+			
 			// Diplaying the Tool List
 			$tools = get_field('tools');
 					if( $tools ): ?>
@@ -35,6 +48,7 @@ get_header();
 			if (get_field('github')) {
 				$githubLink = get_field('github');
 
+				// GitHub Link
 				if($githubLink){
 					$github_url = $githubLink['url'];
 					$github_title = $githubLink['title'];
@@ -42,25 +56,14 @@ get_header();
 				?>
 					<div class="link">
 					<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php echo esc_html($github_title); ?></a>
-					
 					<?php
 				}
 			}
-
-			if (get_field('live')) {
-				$liveLink = get_field('live');
-
-				if($liveLink){
-					$live_url = $liveLink['url'];
-					$live_title = $liveLink['title'];
-					$live_target = $liveLink['target'] ? $liveLink['target'] : '_self';
-				?>
+			 	?>
+				 <!-- Live Site Link -->
 					<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php echo esc_html($live_title); ?></a>
 					</div>
 					<?php
-				}
-			}
-			// Displaying the Description 
 			if (function_exists ( 'get_field')) {
 				if (get_field('description')) {
 					echo '<p>'.get_field('description');

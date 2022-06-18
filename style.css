@@ -402,6 +402,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: BioRhyme;
 }
 
 h1 {
@@ -420,6 +421,11 @@ h3 {
 	font-size: 1.5rem;
 }
 
+@media screen and (min-width: 50em) {
+	h1 {
+		font-size: 3rem;
+	}
+}
 p {
 	margin-bottom: 1.5em;
 	font-size: 1.25rem;
@@ -789,26 +795,74 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top: 2px solid #ee4926;
+	border-top: 2px solid #ffd72f;
 }
 .site-header li {
 	border: none;
 }
 .site-header a {
 	color: #ee4926;
+	font-weight: 700;
+	font-size: 1.1rem;
 }
 
 .menu svg {
 	fill: #ee4926;
 }
 
-footer svg {
+@media screen and (min-width: 50em) {
+	.site {
+		display: grid;
+		grid-template-columns: 10rem auto;
+	}
+	.site-header {
+		grid-column: 1/2;
+		grid-row: 1/-1;
+		background-color: #fff;
+		position: static;
+		border-top: 0;
+		border-right: 2px solid #ffd72f;
+	}
+	.menu-main-menu-container {
+		position: fixed;
+		top: 0;
+		left: 2.5rem;
+		height: 100%;
+		display: flex;
+	}
+	.menu-main-menu-container ul {
+		flex-direction: column;
+	}
+	.menu-main-menu-container ul li:first-child {
+		margin-left: 1rem;
+	}
+	.site-footer {
+		grid-column: 1/-1;
+		grid-row: 2/3;
+	}
+}
+svg {
 	height: 2rem;
 	width: 2rem;
 	margin-right: 1rem;
 	vertical-align: middle;
 }
 
+@media screen and (min-width: 50em) {
+	.site-footer {
+		background-color: #ee4926;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+	.site-info {
+		text-align: center;
+	}
+	.site-info a {
+		color: #fff;
+	}
+}
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -817,7 +871,7 @@ footer svg {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .updated:not(.published) {
@@ -944,19 +998,20 @@ footer svg {
 .home .entry-content {
 	margin: 0;
 }
-.home .entry-content h1 {
+.home h1 {
 	background-color: #ee4926;
 	color: #fff;
 	text-align: center;
 }
 .home p {
+	font-weight: 500;
 	text-align: center;
 	margin: 3rem auto;
 }
 .home .wp-block-button__link {
 	background-color: #fdfbe8;
 	color: #575757;
-	font-weight: 500;
+	font-weight: 600;
 	border: 2px solid #ee4926;
 	border-radius: 0px;
 	padding: 0.5rem;
@@ -975,11 +1030,41 @@ footer svg {
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
+	margin-bottom: 30rem;
 }
 .home svg {
 	fill: #ee4926;
 	height: 2.5rem;
 	width: 2.5rem;
+}
+@media screen and (min-width: 50em) {
+	.home .entry-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.home .home-title {
+		background-color: #ee4926;
+	}
+	.home .home-title,
+.home .home-content {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.home h1 {
+		padding: 1rem;
+	}
+	.home .home-content p {
+		font-size: 1.5rem;
+	}
+	.home .contact-wrapper {
+		margin: 0;
+	}
+	.home .site-footer {
+		display: none;
+	}
 }
 
 /* Homepage
@@ -994,16 +1079,41 @@ footer svg {
 	background-color: #fff;
 }
 .post-type-archive-portfolio-work .size-work-archive-img {
-	padding: 3rem 1rem;
+	padding: 3rem 1rem 1rem 1rem;
+	width: 25rem;
+}
+.post-type-archive-portfolio-work .work-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 3rem;
+}
+.post-type-archive-portfolio-work h2 {
+	margin-top: 0;
 }
 .post-type-archive-portfolio-work .details {
-	margin-bottom: 8rem;
 	border-bottom: 3px solid #ee4926;
+	margin-bottom: 3rem;
+}
+@media screen and (min-width: 50em) {
+	.post-type-archive-portfolio-work .size-work-archive-img {
+		width: 30rem;
+		padding: 5rem 0;
+	}
+	.post-type-archive-portfolio-work .work {
+		flex-direction: row;
+		gap: 5rem;
+	}
+	.post-type-archive-portfolio-work .work-tools {
+		max-width: 20rem;
+	}
 }
 
 .single-portfolio-work img {
+	width: 30rem;
 	display: block;
 	margin: 0 auto;
+	padding: 1rem;
 }
 .single-portfolio-work .link {
 	text-align: center;
@@ -1016,13 +1126,25 @@ footer svg {
 .single-portfolio-work .link p {
 	margin-bottom: 3rem;
 }
+.single-portfolio-work .navigation {
+	margin: 1rem auto 5rem;
+}
+@media screen and (min-width: 50em) {
+	.single-portfolio-work img {
+		width: 65rem;
+		padding-top: 2rem;
+	}
+	.single-portfolio-work .navigation {
+		margin: 2rem 3rem 5rem;
+	}
+}
 
 /* About Part
 --------------------------------------------- */
 .page-id-47 .about-description {
 	max-width: 30rem;
 	padding: 3rem 1rem;
-	margin-bottom: 4em;
+	margin-bottom: 4rem;
 	border-top: 1px solid #575757;
 	border-bottom: 1px solid #575757;
 }
@@ -1048,7 +1170,7 @@ footer svg {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 3rem;
+	padding-bottom: 3rem;
 }
 .archive .contact-wrapper p,
 .single .contact-wrapper p,

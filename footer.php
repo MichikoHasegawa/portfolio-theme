@@ -15,7 +15,7 @@
 		<div class="site-info">
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Created by %2$s.', 'michiko-portfolio' ), 'michiko-portfolio', '<a href="https://michikohasegawa.com/">Michiko Hasegawa</a>' );
+			printf( '<a href="https://michikohasegawa.com/">&copy; Michiko Hasegawa</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

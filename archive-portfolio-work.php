@@ -52,29 +52,31 @@ get_header();
 					$query->the_post();
 					?>
 					<section class="work">
-					<?php
-					// Display the Image
-					the_post_thumbnail('work-archive-img');
+						<!-- Display the Image -->
+						<div class="work-img">
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('work-archive-img'); ?></a>
+						</div>
+						<?php 
+						//Display the title
+						?>
+						<div class="work-content">
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+							<?php
 
-					//Display the title
-					?>
-					<a href="<?php the_permalink(); ?>"><h2><?php the_title() ?></h2></a>
-					<?php
-
-					// Diplaying the Tool List
-					$tools = get_field('tools');
-					if( $tools ): ?>
-					<ul>
-					<?php foreach( $tools as $tool ): ?>
-					<li><?php echo $tool; ?></li>
-					<?php endforeach; ?>
-					</ul>
-					<?php endif; 
-				
-					// Display See Details Button
-					?>
-					<a class="details" href="<?php the_permalink(); ?>"><?php esc_html_e('See Details', 'portfolio'); ?></a>
-					<?php
+							// Diplaying the Tool List
+							$tools = get_field('tools');
+							if( $tools ): ?>
+							<ul class="work-tools">
+							<?php foreach( $tools as $tool ): ?>
+							<li><?php echo $tool; ?></li>
+							<?php endforeach; ?>
+							</ul>
+							<?php endif; 
+						
+							// Display See Details Button
+							?><p><a class="details" href="<?php the_permalink(); ?>"><?php esc_html_e('See Details', 'portfolio'); ?></a></p>
+						</div>
+						<?php
 					echo '</section>';
 				}
 				

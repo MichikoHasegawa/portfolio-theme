@@ -6,7 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // border-bottom: 2px solid $yellow;
   }
 
   .work:nth-child(odd) {
@@ -14,21 +13,50 @@
   }
 
   .size-work-archive-img {
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 1rem 1rem;
+    width: 25rem;
+  }
+
+  .work-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin-top: 0;
   }
 
   .details {
-    margin-bottom: 8rem;
     border-bottom: 3px solid $red;
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (min-width: 50em) {
+    .size-work-archive-img {
+      width: 30rem;
+      padding: 5rem 0;
+    }
+
+    .work {
+      flex-direction: row;
+      gap: 5rem;
+    }
+
+    .work-tools {
+      max-width: 20rem;
+    }
   }
 }
 
 // Work Single Page
 .single-portfolio-work {
   img {
+    width: 30rem;
     display: block;
     margin: 0 auto;
-    // text-align: center;
+    padding: 1rem;
   }
 
   .link {
@@ -40,9 +68,22 @@
     }
 
     p {
-      // margin: 0 auto;
-      // max-width: 30rem;
       margin-bottom: 3rem;
+    }
+  }
+
+  .navigation {
+    margin: 1rem auto 5rem;
+  }
+
+  @media screen and (min-width: 50em) {
+    img {
+      width: 65rem;
+      padding-top: 2rem;
+    }
+
+    .navigation {
+      margin: 2rem 3rem 5rem;
     }
   }
 }

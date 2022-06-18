@@ -74,13 +74,6 @@
   display: none;
 }
 
-// @media screen and (min-width: 37.5em) {
-// .menu-toggle {
-// display: none;
-// display: block;
-// }
-// }
-
 .menu-main-menu-container {
   text-align: center;
 }
@@ -125,8 +118,6 @@ body {
 
 .site-header {
   background-color: $light-yellow;
-  // height: 4rem;
-  // margin-top: 5rem;
   padding: 1rem;
   position: fixed;
   bottom: 0;
@@ -134,7 +125,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid $red;
+  border-top: 2px solid $yellow;
 
   li {
     border: none;
@@ -142,6 +133,8 @@ body {
 
   a {
     color: $red;
+    font-weight: 700;
+    font-size: 1.1rem;
   }
 }
 
@@ -149,10 +142,65 @@ body {
   fill: $red;
 }
 
-// Footer
-footer svg {
+@media screen and (min-width: 50em) {
+  .site {
+    display: grid;
+    grid-template-columns: 10rem auto;
+  }
+
+  .site-header {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: $white;
+    position: static;
+    border-top: 0;
+    border-right: 2px solid $yellow;
+  }
+
+  .menu-main-menu-container {
+    position: fixed;
+    top: 0;
+    left: 2.5rem;
+    height: 100%;
+    display: flex;
+
+    ul {
+      flex-direction: column;
+
+      li:first-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .site-footer {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+}
+
+// Footer footer
+svg {
   height: 2rem;
   width: 2rem;
   margin-right: 1rem;
   vertical-align: middle;
+}
+
+@media screen and (min-width: 50em) {
+  .site-footer {
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .site-info {
+    text-align: center;
+  }
+
+  .site-info a {
+    color: $white;
+  }
 }

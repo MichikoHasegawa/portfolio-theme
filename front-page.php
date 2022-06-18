@@ -25,20 +25,27 @@ get_header();
 		?>	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="entry-content">
-				
-				<h1><?php the_title(); ?></h1>
-				<?php
-				the_content();
+				<div class="home-title">
+					<h1><?php the_title(); ?></h1>
+				</div>
+				<div class="home-content">
+					<?php
+					the_content();
+					?>
+					
+					<?php
 
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'michiko-portfolio' ),
-						'after'  => '</div>',
-					)
-				);
-				?>
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'michiko-portfolio' ),
+							'after'  => '</div>',
+						)
+					);
+					?>
+				
+				<?php get_template_part( 'template-parts/content', 'socialicons' ); ?>
+				</div>
 			</div><!-- .entry-content -->
-			<?php get_template_part( 'template-parts/content', 'socialicons' ); ?>
 			
 		</article><!-- #post-<?php the_ID(); ?> -->
 
@@ -52,9 +59,8 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
 	</main><!-- #main -->
 	
 
 <?php
-// get_footer();
+get_footer();
