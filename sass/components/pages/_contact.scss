@@ -4,7 +4,7 @@
   background-color: $white;
   flex-direction: column;
   justify-content: center;
-  border-top: 2px solid $yellow;
+  border-top: 2px solid $light-gray;
 
   .contact {
     display: flex;
@@ -22,10 +22,9 @@
   }
 
   .contact-btn {
-    background-color: $yellow;
-    color: $gray;
     font-size: 1.5rem;
     font-weight: 600;
+    border: 2px solid $yellow;
     border-radius: 5px;
     padding: 0.2rem 0.5rem;
     margin-bottom: 1rem;

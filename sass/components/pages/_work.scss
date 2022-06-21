@@ -14,7 +14,7 @@
 
   .size-work-archive-img {
     padding: 3rem 1rem 1rem 1rem;
-    width: 25rem;
+    width: 20rem;
   }
 
   .work-content {
@@ -35,8 +35,8 @@
 
   @media screen and (min-width: 50em) {
     .size-work-archive-img {
-      width: 30rem;
-      padding: 5rem 0;
+      width: 25rem;
+      padding: 5rem 1rem;
     }
 
     .work {
@@ -56,30 +56,51 @@
     width: 30rem;
     display: block;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    padding-top: 0;
+    font-size: 2rem;
   }
 
   .link {
     text-align: center;
-    margin-bottom: 2.5rem;
+    // margin-bottom: 7rem;
     a {
       border-bottom: 2px solid $red;
       margin-right: 1rem;
     }
+  }
 
-    p {
-      margin-bottom: 3rem;
-    }
+  p {
+    margin-bottom: 5rem;
   }
 
   .navigation {
     margin: 1rem auto 5rem;
   }
 
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .single-work-steps {
+    margin-bottom: 4rem;
+  }
+
+  // .single-work-step:first-child {
+  //   margin-bottom: 7rem;
+  // }
+
+  .single-work-step {
+    margin-bottom: 7rem;
+  }
+
   @media screen and (min-width: 50em) {
-    img {
-      width: 65rem;
-      padding-top: 2rem;
+    .single-work-descriotion img {
+      width: 40rem;
+      padding-top: 5rem;
     }
 
     .navigation {

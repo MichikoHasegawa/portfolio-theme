@@ -432,7 +432,7 @@ p {
 	line-height: 1.8;
 	padding: 1rem;
 	margin: 0 auto;
-	max-width: 30rem;
+	max-width: 40rem;
 }
 
 dfn,
@@ -795,7 +795,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top: 2px solid #ffd72f;
+	border-top: 2px solid #e5e5e5;
 }
 .site-header li {
 	border: none;
@@ -821,7 +821,7 @@ body {
 		background-color: #fff;
 		position: static;
 		border-top: 0;
-		border-right: 2px solid #ffd72f;
+		border-right: 2px solid #e5e5e5;
 	}
 	.menu-main-menu-container {
 		position: fixed;
@@ -861,6 +861,7 @@ svg {
 	}
 	.site-info a {
 		color: #fff;
+		font-size: 0.8rem;
 	}
 }
 /* Posts and pages
@@ -1080,7 +1081,7 @@ svg {
 }
 .post-type-archive-portfolio-work .size-work-archive-img {
 	padding: 3rem 1rem 1rem 1rem;
-	width: 25rem;
+	width: 20rem;
 }
 .post-type-archive-portfolio-work .work-content {
 	display: flex;
@@ -1097,8 +1098,8 @@ svg {
 }
 @media screen and (min-width: 50em) {
 	.post-type-archive-portfolio-work .size-work-archive-img {
-		width: 30rem;
-		padding: 5rem 0;
+		width: 25rem;
+		padding: 5rem 1rem;
 	}
 	.post-type-archive-portfolio-work .work {
 		flex-direction: row;
@@ -1113,26 +1114,38 @@ svg {
 	width: 30rem;
 	display: block;
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 2rem 1rem;
+}
+.single-portfolio-work h1 {
+	padding-top: 0;
+	font-size: 2rem;
 }
 .single-portfolio-work .link {
 	text-align: center;
-	margin-bottom: 2.5rem;
 }
 .single-portfolio-work .link a {
 	border-bottom: 2px solid #ee4926;
 	margin-right: 1rem;
 }
-.single-portfolio-work .link p {
-	margin-bottom: 3rem;
+.single-portfolio-work p {
+	margin-bottom: 5rem;
 }
 .single-portfolio-work .navigation {
 	margin: 1rem auto 5rem;
 }
+.single-portfolio-work h2 {
+	margin-bottom: 0;
+}
+.single-portfolio-work .single-work-steps {
+	margin-bottom: 4rem;
+}
+.single-portfolio-work .single-work-step {
+	margin-bottom: 7rem;
+}
 @media screen and (min-width: 50em) {
-	.single-portfolio-work img {
-		width: 65rem;
-		padding-top: 2rem;
+	.single-portfolio-work .single-work-descriotion img {
+		width: 40rem;
+		padding-top: 5rem;
 	}
 	.single-portfolio-work .navigation {
 		margin: 2rem 3rem 5rem;
@@ -1161,7 +1174,7 @@ svg {
 	background-color: #fff;
 	flex-direction: column;
 	justify-content: center;
-	border-top: 2px solid #ffd72f;
+	border-top: 2px solid #e5e5e5;
 }
 .archive .contact-wrapper .contact,
 .single .contact-wrapper .contact,
@@ -1183,10 +1196,9 @@ svg {
 .archive .contact-wrapper .contact-btn,
 .single .contact-wrapper .contact-btn,
 .page-id-47 .contact-wrapper .contact-btn {
-	background-color: #ffd72f;
-	color: #888888;
 	font-size: 1.5rem;
 	font-weight: 600;
+	border: 2px solid #ffd72f;
 	border-radius: 5px;
 	padding: 0.2rem 0.5rem;
 	margin-bottom: 1rem;

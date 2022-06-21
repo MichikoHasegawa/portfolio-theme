@@ -125,7 +125,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid $yellow;
+  border-top: 2px solid $light-gray;
 
   li {
     border: none;
@@ -154,7 +154,7 @@ body {
     background-color: $white;
     position: static;
     border-top: 0;
-    border-right: 2px solid $yellow;
+    border-right: 2px solid $light-gray;
   }
 
   .menu-main-menu-container {
@@ -202,5 +202,6 @@ svg {
 
   .site-info a {
     color: $white;
+    font-size: 0.8rem;
   }
 }

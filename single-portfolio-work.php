@@ -27,7 +27,7 @@ get_header();
 			}
 			?>
 			<!-- Display the thumbnail -->
-			<section>
+			<section class="single-work-descriotion">
 				<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_post_thumbnail('work-single-img'); ?></a>
 
 				<!-- Display the title -->
@@ -76,13 +76,13 @@ get_header();
 				?>
 				</section>
 <!------------------------------------------------------------------>
-				<section>
-					<div>
+				<section class="single-work-steps">
+					<div class="single-work-step">
 					<?php
 						if (get_field('wireframe_img') && get_field('wireframe_link')) {
 							?>
 							<!-- Display Heading: Wireframe -->
-							<h2><?php esc_html_e( 'Wireframe', 'michiko-portfolio' ); ?></h2>
+							<h2><?php esc_html_e( 'Step 1: Wireframe', 'michiko-portfolio' ); ?></h2>
 							<?php
 							
 							// Display Wireframe Image (ID)
@@ -105,19 +105,19 @@ get_header();
 							// Display Wireframe Link
 							?>
 							<div class="link">
-									<a href="<?php echo esc_url($wireframe_url); ?>"target="<?php echo esc_attr($wireframe_target); ?>"><?php echo esc_html($wireframe_title); ?></a>
+									<a  class="link"href="<?php echo esc_url($wireframe_url); ?>"target="<?php echo esc_attr($wireframe_target); ?>"><?php echo esc_html($wireframe_title); ?></a>
 							</div>
 							<?php
 							} 
 							?>
-						</div>
+					</div>
 
-						<div>
+					<div class="single-work-step">
 						<?php
 						if (get_field('prototype_img') && get_field('prototype_link')) {
 							?>
 							<!-- Display Heading: Prototypr -->
-							<h2><?php esc_html_e( 'Prototype', 'michiko-portfolio' ); ?></h2>
+							<h2><?php esc_html_e( 'Step 2: Prototype', 'michiko-portfolio' ); ?></h2>
 							<?php
 							
 							// Display Prototypr Image (ID)
@@ -141,11 +141,27 @@ get_header();
 									<a href="<?php echo esc_url($Prototype_url); ?>"target="<?php echo esc_attr($Prototype_target); ?>"><?php echo esc_html($Prototype_title); ?></a>
 							</div>
 							<?php
-							} 
-							?>
+						} 
+						?>
 						</div>
-					</section>
-					<?php
+
+						<div class="single-work-step">
+							<!-- Display Heading: Development -->
+							<h2><?php esc_html_e( 'Step 3: Development', 'michiko-portfolio' ); ?></h2>
+
+							<!-- Display the thumbnail -->
+							<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_post_thumbnail('work-single-img'); ?></a>
+
+							<div class="link">
+								<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php echo esc_html($github_title); ?></a>
+							
+								<!-- Live Site Link -->
+								<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php echo esc_html($live_title); ?></a>
+							</div>	
+						<div>
+					</div>
+				</section>
+				<?php
 				
 			the_post_navigation(
 				array(
