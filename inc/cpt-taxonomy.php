@@ -45,32 +45,6 @@
         'menu_position'      => 20,
         'menu_icon'          => 'dashicons-archive',
         'supports'           => array( 'title', 'thumbnail','editor' ),
-     
-        // 'template' => array(
-        //     array( 'core/paragraph', array( // you can find it in the bloks folder in the wp-includes folder (outside content/thems)
-        //         'placeholder' => 'Add Biography...',
-        //     ) ),
-        //     array( 'core/button', array(  
-        //         'placeholder' => 'Add Link...',
-        //     ) ),
-        // ),
-        // 'template' => array(
-        //     array( 'core/list', array(
-        //         'placeholder' => 'Add Tools'
-        //     ) ),
-        //     array( 'core/button', array(
-        //         'placeholder' => 'Add a Link for See Details'
-        //     ) ),
-        //     array( 'core/button', array(
-        //         'placeholder' => 'Add GitHub Link...',
-        //     ) ),
-        //     array( 'core/button', array(
-        //         'placeholder' => 'Add Live Link...',
-        //     ) ),
-        //     array( 'core/paragraph', array(
-        //         'placeholder' => 'Add Description',
-        //     ) ),
-        // ),
     );
     register_post_type( 'portfolio-work', $args );
 }

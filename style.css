@@ -525,7 +525,7 @@ ol {
 }
 
 ul {
-	margin: 0 0 2rem 0;
+	margin: 0 0 2rem;
 	padding: 0;
 	list-style: none;
 	display: flex;
@@ -557,7 +557,7 @@ li {
 	color: #888888;
 	border: 2px solid #888888;
 	border-radius: 5px;
-	padding: 0 0.2rem;
+	padding: 0 0.5rem;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -1087,7 +1087,8 @@ svg {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-bottom: 3rem;
+	margin: 3rem 0;
+	min-width: 20rem;
 }
 .post-type-archive-portfolio-work h2 {
 	margin-top: 0;
@@ -1122,10 +1123,13 @@ svg {
 }
 .single-portfolio-work .link {
 	text-align: center;
+	margin-bottom: 2rem;
 }
 .single-portfolio-work .link a {
 	border-bottom: 2px solid #ee4926;
-	margin-right: 1rem;
+}
+.single-portfolio-work .link a:nth-of-type(even) {
+	margin-left: 1rem;
 }
 .single-portfolio-work p {
 	margin-bottom: 5rem;

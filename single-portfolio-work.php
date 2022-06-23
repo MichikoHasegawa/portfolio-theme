@@ -37,14 +37,16 @@ get_header();
 				
 				// Diplaying the Tool List
 				$tools = get_field('tools');
-						if( $tools ): ?>
-						<ul>
-						<?php foreach( $tools as $tool ): ?>
+					if( $tools ): ?>
+					<ul>
+					<?php foreach( $tools as $tool ): ?>
 						<li><?php echo $tool; ?></li>
-						<?php endforeach; ?>
-						</ul>
-						<?php endif;
+					<?php endforeach; ?>
+					</ul>
+					<?php endif; ?>
 
+					<div class="link">
+					<?php
 				// Displaying the Links
 				if (get_field('github')) {
 					$githubLink = get_field('github');
@@ -55,14 +57,21 @@ get_header();
 						$github_title = $githubLink['title'];
 						$github_target = $githubLink['target'] ? $githubLink['target'] : '_self';
 					?>
-						<div class="link">
-						<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php echo esc_html($github_title); ?></a>
-						<?php
+						<!-- <div class="link"> -->
+							<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php esc_html_e( 'GitHub', 'michiko-portfolio' ); ?></a>
+							<?php
 					}
 				}
 					?>
 					<!-- Live Site Link -->
-						<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php echo esc_html($live_title); ?></a>
+					<?php
+						if (get_field('live')) {
+							?>
+							<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php esc_html_e( 'Live Site', 'michiko-portfolio' ); ?></a>
+						<!-- </div> -->
+						<?php
+						}
+						?>
 						</div>
 						<?php
 
@@ -77,89 +86,117 @@ get_header();
 				</section>
 <!------------------------------------------------------------------>
 				<section class="single-work-steps">
-					<div class="single-work-step">
+					<!-- <div class="single-work-step"> -->
 					<?php
 						if (get_field('wireframe_img') && get_field('wireframe_link')) {
 							?>
 							<!-- Display Heading: Wireframe -->
-							<h2><?php esc_html_e( 'Step 1: Wireframe', 'michiko-portfolio' ); ?></h2>
-							<?php
-							
-							// Display Wireframe Image (ID)
-							$image = get_field('wireframe_img');
-							$size = 'work-archive-img';
-							$WireframeLink = get_field('wireframe_link');
-							
-							if($WireframeLink){
-								$wireframe_url = $WireframeLink['url'];
-								$wireframe_title = $WireframeLink['title'];
-								$wireframe_target = $WireframeLink['target'] ? $WireframeLink['target'] : '_self';
-							}
-							
-							if( $image ) {
-								?>
-								<a href="<?php echo esc_url($wireframe_url); ?>"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
+							<div class="single-work-step">
+								<h2><?php esc_html_e( 'Wireframe', 'michiko-portfolio' ); ?></h2>
 								<?php
-							}
 							
-							// Display Wireframe Link
-							?>
-							<div class="link">
-									<a  class="link"href="<?php echo esc_url($wireframe_url); ?>"target="<?php echo esc_attr($wireframe_target); ?>"><?php echo esc_html($wireframe_title); ?></a>
+								// Display Wireframe Image (ID)
+								$wireframe_img = get_field('wireframe_img');
+								$size = 'work-archive-img';
+								$WireframeLink = get_field('wireframe_link');
+								
+								if($WireframeLink){
+									$wireframe_url = $WireframeLink['url'];
+									$wireframe_title = $WireframeLink['title'];
+									$wireframe_target = $WireframeLink['target'] ? $WireframeLink['target'] : '_self';
+								}
+								
+								if( $wireframe_img ) {
+									?>
+									<a href="<?php echo esc_url($wireframe_url); ?>"><?php echo wp_get_attachment_image( $wireframe_img, $size ); ?></a>
+									<?php
+								}
+							
+								// Display Wireframe Link
+								?>
+								<div class="link">
+										<a href="<?php echo esc_url($wireframe_url); ?>"target="<?php echo esc_attr($wireframe_target); ?>"><?php esc_html_e( 'View Wireframe', 'michiko-portfolio' ); ?></a>
+								</div>
 							</div>
 							<?php
 							} 
+						
+						if (get_field('prototype_img') || get_field('prototype_link')) {
 							?>
-					</div>
-
-					<div class="single-work-step">
-						<?php
-						if (get_field('prototype_img') && get_field('prototype_link')) {
-							?>
-							<!-- Display Heading: Prototypr -->
-							<h2><?php esc_html_e( 'Step 2: Prototype', 'michiko-portfolio' ); ?></h2>
-							<?php
-							
-							// Display Prototypr Image (ID)
-							$PrototypeLink = get_field('prototype_link');
-							
-							if($PrototypeLink){
-								$Prototype_url = $PrototypeLink['url'];
-								$Prototype_title = $PrototypeLink['title'];
-								$Prototype_target = $PrototypeLink['target'] ? $PrototypeLink['target'] : '_self';
-							}
-							
-							if( $image ) {
-								?>
-								<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
+							<!-- ----------------------------------- -->
+							<!-- Display Heading: Prototype -->
+							<div class="single-work-step">
+								<h2><?php esc_html_e( 'Prototype', 'michiko-portfolio' ); ?></h2>
 								<?php
-							}
-							
-							// Display Wireframe Link
-							?>
-							<div class="link">
-									<a href="<?php echo esc_url($Prototype_url); ?>"target="<?php echo esc_attr($Prototype_target); ?>"><?php echo esc_html($Prototype_title); ?></a>
+								
+								// Display Prototypr Image (ID)
+								$PrototypeLink = get_field('prototype_link');
+								$Prototype_img = get_field('prototype_img');
+								
+								if($PrototypeLink){
+									$Prototype_url = $PrototypeLink['url'];
+									$Prototype_title = $PrototypeLink['title'];
+									$Prototype_target = $PrototypeLink['target'] ? $PrototypeLink['target'] : '_self';
+								}
+								
+								if( $Prototype_img ) {
+									?>
+									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $Prototype_img, $size ); ?></a>
+									<?php
+								}
+								
+								// Display Prototype Link
+								?>
+								<div class="link">
+										<a href="<?php echo esc_url($Prototype_url); ?>"target="<?php echo esc_attr($Prototype_target); ?>"><?php esc_html_e( 'View Prototype', 'michiko-portfolio' ); ?></a>
+								</div>
 							</div>
 							<?php
 						} 
 						?>
-						</div>
 
+						<?php
+						if (get_field('development_img')) {
+						?>
 						<div class="single-work-step">
-							<!-- Display Heading: Development -->
-							<h2><?php esc_html_e( 'Step 3: Development', 'michiko-portfolio' ); ?></h2>
-
-							<!-- Display the thumbnail -->
-							<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_post_thumbnail('work-single-img'); ?></a>
-
-							<div class="link">
-								<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php echo esc_html($github_title); ?></a>
+								<h2><?php esc_html_e( 'Development', 'michiko-portfolio' ); ?></h2>
+								<?php
+								
+								// Display Development Image (ID)
+								// $development_link = get_field('development_link');
+								$development_img = get_field('development_img');
+								
+								// if($development_link){
+								// 	$development_url = $development_link['url'];
+								// 	$development_title = $development_link['title'];
+								// 	$development_target = $development_link['target'] ? $development_link['target'] : '_self';
+								// }
+								
+								if( $development_img ) {
+									?>
+									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $development_img, $size ); ?></a>
+									<?php
+								}
+								
+								// Display GitHub Link
+								?>
+								<div class="link">
+								<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php esc_html_e( 'Github', 'michiko-portfolio' ); ?></a>
 							
 								<!-- Live Site Link -->
-								<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php echo esc_html($live_title); ?></a>
+								<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php esc_html_e( 'Live Site', 'michiko-portfolio' ); ?></a>
 							</div>	
-						<div>
-					</div>
+							</div>
+
+
+
+
+
+
+
+						<?php 
+						} ?>
+					<!-- </div> -->
 				</section>
 				<?php
 				
