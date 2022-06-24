@@ -100,6 +100,11 @@ function michiko_portfolio_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	// Add Image Size
+	add_image_size( 'work-archive-img', 500, 300, true );
+	add_image_size( 'work-single-img', 1000, 600, true );
+
 }
 add_action( 'after_setup_theme', 'michiko_portfolio_setup' );
 
@@ -205,9 +210,3 @@ require get_template_directory() . '/inc/cpt-taxonomy.php';
  * Remove Archive Title Prefix
  */
 add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
-
-/**
- * Add Image Size
- */
-add_image_size( 'work-archive-img', 500, 200, false );
-add_image_size( 'work-single-img', 1000, 400, false );

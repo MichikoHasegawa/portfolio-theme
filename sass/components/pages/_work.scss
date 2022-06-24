@@ -14,7 +14,6 @@
 
   .size-work-archive-img {
     padding: 3rem 1rem 1rem 1rem;
-    width: 20rem;
   }
 
   .work-content {
@@ -36,7 +35,6 @@
 
   @media screen and (min-width: 50em) {
     .size-work-archive-img {
-      width: 25rem;
       padding: 5rem 1rem;
     }
 
@@ -55,6 +53,7 @@
 .single-portfolio-work {
   img {
     width: 30rem;
+    // height: 20rem;
     display: block;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -67,7 +66,6 @@
 
   .link {
     text-align: center;
-    // margin-bottom: 5rem;
     margin-bottom: 2rem;
     a {
       border-bottom: 2px solid $red;
@@ -104,7 +102,6 @@
 
   @media screen and (min-width: 50em) {
     .single-work-descriotion img {
-      width: 40rem;
       padding-top: 5rem;
     }
 

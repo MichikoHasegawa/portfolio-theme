@@ -1081,7 +1081,6 @@ svg {
 }
 .post-type-archive-portfolio-work .size-work-archive-img {
 	padding: 3rem 1rem 1rem 1rem;
-	width: 20rem;
 }
 .post-type-archive-portfolio-work .work-content {
 	display: flex;
@@ -1099,7 +1098,6 @@ svg {
 }
 @media screen and (min-width: 50em) {
 	.post-type-archive-portfolio-work .size-work-archive-img {
-		width: 25rem;
 		padding: 5rem 1rem;
 	}
 	.post-type-archive-portfolio-work .work {
@@ -1148,7 +1146,6 @@ svg {
 }
 @media screen and (min-width: 50em) {
 	.single-portfolio-work .single-work-descriotion img {
-		width: 40rem;
 		padding-top: 5rem;
 	}
 	.single-portfolio-work .navigation {

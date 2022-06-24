@@ -98,12 +98,12 @@ get_header();
 								// Display Wireframe Image (ID)
 								$wireframe_img = get_field('wireframe_img');
 								$size = 'work-archive-img';
-								$WireframeLink = get_field('wireframe_link');
+								$wireframe_link = get_field('wireframe_link');
 								
-								if($WireframeLink){
-									$wireframe_url = $WireframeLink['url'];
-									$wireframe_title = $WireframeLink['title'];
-									$wireframe_target = $WireframeLink['target'] ? $WireframeLink['target'] : '_self';
+								if($wireframe_link){
+									$wireframe_url = $wireframe_link['url'];
+									$wireframe_title = $wireframe_link['title'];
+									$wireframe_target = $wireframe_link['target'] ? $wireframe_link['target'] : '_self';
 								}
 								
 								if( $wireframe_img ) {
@@ -130,18 +130,18 @@ get_header();
 								<?php
 								
 								// Display Prototypr Image (ID)
-								$PrototypeLink = get_field('prototype_link');
-								$Prototype_img = get_field('prototype_img');
+								$prototype_link = get_field('prototype_link');
+								$prototype_img = get_field('prototype_img');
 								
 								if($PrototypeLink){
-									$Prototype_url = $PrototypeLink['url'];
-									$Prototype_title = $PrototypeLink['title'];
-									$Prototype_target = $PrototypeLink['target'] ? $PrototypeLink['target'] : '_self';
+									$prototype_link = $prototype_link['url'];
+									$Prototype_title = $prototype_link['title'];
+									$Prototype_target = $prototype_link['target'] ? $prototype_link['target'] : '_self';
 								}
 								
-								if( $Prototype_img ) {
+								if( $prototype_img ) {
 									?>
-									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $Prototype_img, $size ); ?></a>
+									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $prototype_img, $size ); ?></a>
 									<?php
 								}
 								
@@ -154,7 +154,7 @@ get_header();
 							<?php
 						} 
 						?>
-
+						<!-- ---------------------------------------  -->
 						<?php
 						if (get_field('development_img')) {
 						?>
@@ -163,18 +163,13 @@ get_header();
 								<?php
 								
 								// Display Development Image (ID)
-								// $development_link = get_field('development_link');
 								$development_img = get_field('development_img');
+								$prototype_img_size = 'work-archive-img';
 								
-								// if($development_link){
-								// 	$development_url = $development_link['url'];
-								// 	$development_title = $development_link['title'];
-								// 	$development_target = $development_link['target'] ? $development_link['target'] : '_self';
-								// }
 								
 								if( $development_img ) {
 									?>
-									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $development_img, $size ); ?></a>
+									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $development_img, $prototype_img_size ); ?></a>
 									<?php
 								}
 								
