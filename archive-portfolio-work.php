@@ -53,9 +53,9 @@ get_header();
 					?>
 					<section class="work">
 						<!-- Display the Image -->
-						<div class="work-img">
+						<!-- <div class="work-img"> -->
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('work-archive-img'); ?></a>
-						</div>
+						<!-- </div> -->
 						<?php 
 						//Display the title
 						?>

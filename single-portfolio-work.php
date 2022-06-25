@@ -97,7 +97,7 @@ get_header();
 							
 								// Display Wireframe Image (ID)
 								$wireframe_img = get_field('wireframe_img');
-								$size = 'work-archive-img';
+								$size = 'work-single-img';
 								$wireframe_link = get_field('wireframe_link');
 								
 								if($wireframe_link){

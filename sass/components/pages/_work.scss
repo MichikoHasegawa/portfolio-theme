@@ -3,6 +3,7 @@
 .post-type-archive-portfolio-work {
   .work {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -13,14 +14,17 @@
   }
 
   .size-work-archive-img {
-    padding: 3rem 1rem 1rem 1rem;
+    // padding: 3rem 1rem 1rem 1rem;
+    margin: 3rem 0 1rem;
+    border: 1px solid $gray;
   }
 
   .work-content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 0 0 4rem;
     min-width: 20rem;
   }
 
@@ -34,13 +38,10 @@
   }
 
   @media screen and (min-width: 50em) {
-    .size-work-archive-img {
-      padding: 5rem 1rem;
-    }
-
     .work {
       flex-direction: row;
       gap: 5rem;
+      padding: 5rem 0;
     }
 
     .work-tools {
@@ -51,12 +52,14 @@
 
 // Work Single Page
 .single-portfolio-work {
+  margin-top: 5rem;
   img {
     width: 30rem;
     // height: 20rem;
     display: block;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    margin: 0 auto 3rem;
+    // padding-top: 2rem;
+    border: 1px solid $gray;
   }
 
   h1 {
@@ -101,7 +104,7 @@
   }
 
   @media screen and (min-width: 50em) {
-    .single-work-descriotion img {
+    .single-work-descriotion img a {
       padding-top: 5rem;
     }
 
