@@ -37,11 +37,18 @@
     margin-bottom: 3rem;
   }
 
-  @media screen and (min-width: 50em) {
+  @media screen and (min-width: 70em) {
+    .size-work-archive-img {
+      margin-top: 0;
+    }
     .work {
       flex-direction: row;
       gap: 5rem;
       padding: 5rem 0;
+    }
+
+    .work-content {
+      margin-bottom: 0;
     }
 
     .work-tools {
@@ -52,7 +59,7 @@
 
 // Work Single Page
 .single-portfolio-work {
-  margin-top: 5rem;
+  // margin-top: 5rem;
   img {
     width: 30rem;
     // height: 20rem;
@@ -98,6 +105,9 @@
   // .single-work-step:first-child {
   //   margin-bottom: 7rem;
   // }
+  .single-work-descriotion {
+    margin-top: 5rem;
+  }
 
   .single-work-step {
     margin-bottom: 7rem;

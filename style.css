@@ -1099,20 +1099,23 @@ svg {
 	border-bottom: 3px solid #ee4926;
 	margin-bottom: 3rem;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 70em) {
+	.post-type-archive-portfolio-work .size-work-archive-img {
+		margin-top: 0;
+	}
 	.post-type-archive-portfolio-work .work {
 		flex-direction: row;
 		gap: 5rem;
 		padding: 5rem 0;
+	}
+	.post-type-archive-portfolio-work .work-content {
+		margin-bottom: 0;
 	}
 	.post-type-archive-portfolio-work .work-tools {
 		max-width: 20rem;
 	}
 }
 
-.single-portfolio-work {
-	margin-top: 5rem;
-}
 .single-portfolio-work img {
 	width: 30rem;
 	display: block;
@@ -1144,6 +1147,9 @@ svg {
 }
 .single-portfolio-work .single-work-steps {
 	margin-bottom: 4rem;
+}
+.single-portfolio-work .single-work-descriotion {
+	margin-top: 5rem;
 }
 .single-portfolio-work .single-work-step {
 	margin-bottom: 7rem;
