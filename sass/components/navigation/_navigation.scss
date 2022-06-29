@@ -107,7 +107,7 @@
   }
 
   .nav-title {
-    border-bottom: 1px solid $black;
+    border-bottom: 2px solid $yellow;
   }
 }
 
@@ -136,6 +136,11 @@ body {
     font-weight: 700;
     font-size: 1.1rem;
   }
+
+  // a:hover {
+  //   transition: all 0.3s ease-in-out;
+  //   transform: scale(1.2);
+  // }
 }
 
 .menu svg {

@@ -60,6 +60,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+* {
+	box-sizing: border-box;
+}
+
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -501,6 +505,7 @@ body .site-info {
 .site {
 	margin: 0 auto;
 	min-height: 100vh;
+	width: 100%;
 	background-color: #fdfbe8;
 }
 
@@ -591,7 +596,7 @@ a:visited {
 	color: #575757;
 }
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #575757;
 }
 a:focus {
 	outline: thin dotted;
@@ -610,6 +615,13 @@ a:hover, a:active {
 	display: flex;
 	flex-direction: row;
 	gap: 0.5rem;
+}
+
+.site-header a:hover,
+.home a:hover,
+.contact-social-icons a:hover {
+	transition: all 0.2s ease-in-out;
+	transform: scale(1.2);
 }
 
 /* Forms
@@ -779,7 +791,7 @@ textarea {
 .comment-navigation .nav-title,
 .posts-navigation .nav-title,
 .post-navigation .nav-title {
-	border-bottom: 1px solid #575757;
+	border-bottom: 2px solid #ffd72f;
 }
 
 body {
@@ -1005,6 +1017,7 @@ svg {
 	text-align: center;
 }
 .home p {
+	height: 5rem;
 	font-weight: 500;
 	text-align: center;
 	margin: 3rem auto;
@@ -1014,18 +1027,17 @@ svg {
 	color: #575757;
 	font-weight: 600;
 	border: 2px solid #ee4926;
-	border-radius: 30px;
 	padding: 0.5rem;
 	font-size: 1rem;
 	margin-bottom: 3rem;
 	moz-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
-	background-image: linear-gradient(#ffd72f, #fdfbe8, #fdfbe8, #fdfbe8, #fdfbe8, #fdfbe8, #ffd72f);
+	background-image: linear-gradient(#ffd72f, #ffe785, #ffeeab, #fdfbe8, #fdfbe8, #ffeeab, #ffe785, #ffd72f);
 	box-shadow: 0 4px 15px 0 #ee4926;
 }
 .home .wp-block-button__link:hover {
-	color: #ee4926;
-	background-position: 50px 100px;
+	transform: scale(1);
+	background-position: 135px 100px;
 	moz-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
@@ -1046,7 +1058,7 @@ svg {
 	gap: 1rem;
 	margin-bottom: 30rem;
 }
-.home svg {
+.home .contact-wrapper svg {
 	fill: #ee4926;
 	height: 2.5rem;
 	width: 2.5rem;
@@ -1093,6 +1105,7 @@ svg {
 .post-type-archive-portfolio-work .size-work-archive-img {
 	margin: 3rem 0 1rem;
 	border: 1px solid #888888;
+	border-radius: 2px;
 }
 .post-type-archive-portfolio-work .work-content {
 	display: flex;
@@ -1108,6 +1121,12 @@ svg {
 .post-type-archive-portfolio-work .details {
 	border-bottom: 3px solid #ee4926;
 	margin-bottom: 3rem;
+}
+.post-type-archive-portfolio-work .details:hover {
+	color: #ee4926;
+	font-weight: 500;
+	border-bottom: 3px solid #ffd72f;
+	transition: 0.2s ease-in-out;
 }
 @media screen and (min-width: 70em) {
 	.post-type-archive-portfolio-work .size-work-archive-img {
@@ -1143,6 +1162,12 @@ svg {
 .single-portfolio-work .link a {
 	border-bottom: 2px solid #ee4926;
 }
+.single-portfolio-work .link a:hover {
+	color: #ee4926;
+	font-weight: 500;
+	border-bottom: 2px solid #ffd72f;
+	transition: 0.2s ease-in-out;
+}
 .single-portfolio-work .link a:nth-of-type(even) {
 	margin-left: 1rem;
 }
@@ -1163,6 +1188,9 @@ svg {
 }
 .single-portfolio-work .single-work-step {
 	margin-bottom: 7rem;
+}
+.single-portfolio-work .nav-title:hover {
+	color: #ee4926;
 }
 @media screen and (min-width: 50em) {
 	.single-portfolio-work .single-work-descriotion img a {
@@ -1224,15 +1252,28 @@ svg {
 	padding: 0.2rem 0.5rem;
 	margin-bottom: 1rem;
 }
+.archive .contact-wrapper .contact-btn:hover,
+.single .contact-wrapper .contact-btn:hover,
+.page-id-47 .contact-wrapper .contact-btn:hover {
+	background-color: #ee4926;
+	color: #fff;
+	border: 2px solid #ffd72f;
+	transition: all 0.2s ease-in-out;
+}
 .archive .contact-wrapper .contact-social-icons,
 .single .contact-wrapper .contact-social-icons,
 .page-id-47 .contact-wrapper .contact-social-icons {
 	margin: 3rem 0 5rem 0;
 }
-.archive .contact-wrapper li,
-.single .contact-wrapper li,
-.page-id-47 .contact-wrapper li {
+.archive .contact-wrapper .contact-social-icons li,
+.single .contact-wrapper .contact-social-icons li,
+.page-id-47 .contact-wrapper .contact-social-icons li {
 	border: none;
+}
+.archive .contact-wrapper .contact-social-icons a,
+.single .contact-wrapper .contact-social-icons a,
+.page-id-47 .contact-wrapper .contact-social-icons a {
+	display: block;
 }
 .archive .contact-wrapper svg,
 .single .contact-wrapper svg,

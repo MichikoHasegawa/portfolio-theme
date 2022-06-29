@@ -30,11 +30,23 @@
     margin-bottom: 1rem;
   }
 
+  .contact-btn:hover {
+    background-color: $red;
+    color: $white;
+    border: 2px solid $yellow;
+    transition: all 0.2s ease-in-out;
+  }
+
   .contact-social-icons {
     margin: 3rem 0 5rem 0;
-  }
-  li {
-    border: none;
+
+    li {
+      border: none;
+    }
+
+    a {
+      display: block;
+    }
   }
 
   svg {

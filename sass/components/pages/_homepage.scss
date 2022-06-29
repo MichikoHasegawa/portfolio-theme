@@ -10,6 +10,7 @@
   }
 
   p {
+    height: 5rem;
     font-weight: 500;
     text-align: center;
     margin: 3rem auto;
@@ -20,7 +21,7 @@
     color: $black;
     font-weight: 600;
     border: 2px solid $red;
-    border-radius: 30px;
+    // border-radius: 2px;
     padding: 0.5rem;
     font-size: 1rem;
     margin-bottom: 3rem;
@@ -30,19 +31,23 @@
     transition: all 0.4s ease-in-out;
     background-image: linear-gradient(
       $yellow,
+      #ffe785,
+      #ffeeab,
       $light-yellow,
       $light-yellow,
-      $light-yellow,
-      $light-yellow,
-      $light-yellow,
+      #ffeeab,
+      #ffe785,
       $yellow
     );
     box-shadow: 0 4px 15px 0 $red;
+
+    // background: linear-gradient(90deg, $red 5%, $yellow 80%);
   }
 
   .wp-block-button__link:hover {
-    color: $red;
-    background-position: 50px 100px;
+    // color: $red;
+    transform: scale(1);
+    background-position: 135px 100px;
     moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -69,7 +74,7 @@
     margin-bottom: 30rem;
   }
 
-  svg {
+  .contact-wrapper svg {
     fill: $red;
     height: 2.5rem;
     width: 2.5rem;

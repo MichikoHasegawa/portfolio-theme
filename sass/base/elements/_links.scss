@@ -10,7 +10,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $color__link-hover;
+    color: $black;
   }
 
   &:focus {
@@ -33,4 +33,12 @@ a {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+}
+
+// Hover for the Header, Homepage, Contact section
+.site-header a:hover,
+.home a:hover,
+.contact-social-icons a:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
 }

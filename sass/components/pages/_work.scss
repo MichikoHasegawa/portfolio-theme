@@ -17,6 +17,7 @@
     // padding: 3rem 1rem 1rem 1rem;
     margin: 3rem 0 1rem;
     border: 1px solid $gray;
+    border-radius: 2px;
   }
 
   .work-content {
@@ -35,6 +36,13 @@
   .details {
     border-bottom: 3px solid $red;
     margin-bottom: 3rem;
+  }
+
+  .details:hover {
+    color: $red;
+    font-weight: 500;
+    border-bottom: 3px solid $yellow;
+    transition: 0.2s ease-in-out;
   }
 
   @media screen and (min-width: 70em) {
@@ -81,6 +89,12 @@
       border-bottom: 2px solid $red;
     }
 
+    a:hover {
+      color: $red;
+      font-weight: 500;
+      border-bottom: 2px solid $yellow;
+      transition: 0.2s ease-in-out;
+    }
     a:nth-of-type(even) {
       margin-left: 1rem;
     }
@@ -111,6 +125,10 @@
 
   .single-work-step {
     margin-bottom: 7rem;
+  }
+
+  .nav-title:hover {
+    color: $red;
   }
 
   @media screen and (min-width: 50em) {
