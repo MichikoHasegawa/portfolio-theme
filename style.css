@@ -1014,10 +1014,23 @@ svg {
 	color: #575757;
 	font-weight: 600;
 	border: 2px solid #ee4926;
-	border-radius: 0px;
+	border-radius: 30px;
 	padding: 0.5rem;
 	font-size: 1rem;
 	margin-bottom: 3rem;
+	moz-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	background-image: linear-gradient(#ffd72f, #fdfbe8, #fdfbe8, #fdfbe8, #fdfbe8, #fdfbe8, #ffd72f);
+	box-shadow: 0 4px 15px 0 #ee4926;
+}
+.home .wp-block-button__link:hover {
+	color: #ee4926;
+	background-position: 50px 100px;
+	moz-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.home .wp-block-button__link:focus {
+	outline: none;
 }
 .home .wp-block-buttons {
 	display: flex;
@@ -1053,9 +1066,6 @@ svg {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-	.home h1 {
-		padding: 1rem;
 	}
 	.home .home-content p {
 		font-size: 1.5rem;

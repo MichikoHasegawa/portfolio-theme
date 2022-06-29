@@ -5,7 +5,7 @@
         'name'               => _x( 'Work', 'post type general name' ),
         'singular_name'      => _x( 'Work', 'post type singular name'),
         'menu_name'          => _x( 'Work', 'admin menu' ),
-        'name_admin_bar'     => _x( 'Workt', 'add new on admin bar' ),
+        'name_admin_bar'     => _x( 'Work', 'add new on admin bar' ),
         'add_new'            => _x( 'Add New', 'work' ),
         'add_new_item'       => __( 'Add New Work' ),
         'new_item'           => __( 'New Work' ),
