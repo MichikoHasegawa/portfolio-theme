@@ -28,10 +28,10 @@ get_header();
 			?>
 			<!-- Display the thumbnail -->
 			<section class="single-work-descriotion">
-				<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_post_thumbnail('work-single-img'); ?></a>
+				<?php the_post_thumbnail('work-single-img'); ?>
 
 				<!-- Display the title -->
-				<h1><a href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php the_title(); ?></a></h1>
+				<h1><?php the_title(); ?></h1>
 
 				<?php
 				
@@ -88,7 +88,7 @@ get_header();
 				<section class="single-work-steps">
 					<!-- <div class="single-work-step"> -->
 					<?php
-						if (get_field('wireframe_img') && get_field('wireframe_link')) {
+						if (get_field('wireframe_img') || get_field('wireframe_link')) {
 							?>
 							<!-- Display Heading: Wireframe -->
 							<div class="single-work-step">
@@ -97,7 +97,7 @@ get_header();
 							
 								// Display Wireframe Image (ID)
 								$wireframe_img = get_field('wireframe_img');
-								$size = 'work-single-img';
+								$size = 'work-archive-img';
 								$wireframe_link = get_field('wireframe_link');
 								
 								if($wireframe_link){
@@ -108,7 +108,7 @@ get_header();
 								
 								if( $wireframe_img ) {
 									?>
-									<a href="<?php echo esc_url($wireframe_url); ?>"><?php echo wp_get_attachment_image( $wireframe_img, $size ); ?></a>
+									<?php echo wp_get_attachment_image( $wireframe_img, $size ); ?>
 									<?php
 								}
 							
@@ -132,23 +132,27 @@ get_header();
 								// Display Prototypr Image (ID)
 								$prototype_link = get_field('prototype_link');
 								$prototype_img = get_field('prototype_img');
+								$prototype_img_size = 'work-archive-img';
 								
-								if($PrototypeLink){
-									$prototype_link = $prototype_link['url'];
+								if($prototype_link){
+									$prototype_url = $prototype_link['url'];
 									$Prototype_title = $prototype_link['title'];
 									$Prototype_target = $prototype_link['target'] ? $prototype_link['target'] : '_self';
 								}
 								
 								if( $prototype_img ) {
 									?>
-									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $prototype_img, $size ); ?></a>
+									<?php echo wp_get_attachment_image( $prototype_img, $prototype_img_size ); ?>
 									<?php
 								}
 								
 								// Display Prototype Link
 								?>
 								<div class="link">
-										<a href="<?php echo esc_url($Prototype_url); ?>"target="<?php echo esc_attr($Prototype_target); ?>"><?php esc_html_e( 'View Prototype', 'michiko-portfolio' ); ?></a>
+										<a href="<?php echo esc_url($prototype_url); ?>"target="<?php echo esc_attr($Prototype_target); ?>"><?php esc_html_e( 'View Prototype', 'michiko-portfolio' ); ?></a>
+
+										
+    									<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 								</div>
 							</div>
 							<?php
@@ -164,13 +168,11 @@ get_header();
 								
 								// Display Development Image (ID)
 								$development_img = get_field('development_img');
-								$prototype_img_size = 'work-archive-img';
-								
+								$development_img_size = 'work-archive-img';
 								
 								if( $development_img ) {
 									?>
-									<a href="<?php echo esc_url($Prototype_url); ?>"><?php echo wp_get_attachment_image( $development_img, $prototype_img_size ); ?></a>
-									<?php
+									<?php echo wp_get_attachment_image( $development_img, $development_img_size ); 
 								}
 								
 								// Display GitHub Link

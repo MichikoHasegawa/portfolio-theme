@@ -18,44 +18,38 @@
 
   .wp-block-button__link {
     background-color: $light-yellow;
-    color: $black;
+    color: $red;
     font-weight: 600;
     border: 2px solid $red;
-    // border-radius: 2px;
     padding: 0.5rem;
     font-size: 1rem;
     margin-bottom: 3rem;
-    moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    background-image: linear-gradient(
-      $yellow,
-      #ffe785,
-      #ffeeab,
-      $light-yellow,
-      $light-yellow,
-      #ffeeab,
-      #ffe785,
-      $yellow
-    );
-    box-shadow: 0 4px 15px 0 $red;
-
-    // background: linear-gradient(90deg, $red 5%, $yellow 80%);
+    moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    // background-image: linear-gradient(
+    //   $yellow,
+    //   #ffe785,
+    //   #ffeeab,
+    //   $light-yellow,
+    //   #ffeeab,
+    //   #ffe785,
+    //   $yellow
+    // );
+    box-shadow: 0 2px 15px 0 $yellow;
   }
 
-  .wp-block-button__link:hover {
-    // color: $red;
-    transform: scale(1);
-    background-position: 135px 100px;
-    moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-  }
-
+  .wp-block-button__link:hover,
   .wp-block-button__link:focus {
-    outline: none;
+    transform: scale(1);
+    color: $red;
+    moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    color: $white;
+    background: linear-gradient(90deg, $red, $yellow);
   }
 
   .wp-block-buttons {
@@ -75,7 +69,7 @@
   }
 
   .contact-wrapper svg {
-    fill: $red;
+    fill: $yellow;
     height: 2.5rem;
     width: 2.5rem;
   }
@@ -102,7 +96,7 @@
     }
 
     .home-content p {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     .contact-wrapper {

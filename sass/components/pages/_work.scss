@@ -46,6 +46,31 @@
   }
 
   @media screen and (min-width: 70em) {
+    .work-img {
+      // font-family: "arial black";
+      // font-size: 60px;
+      // text-align: center;
+      // padding: 0;
+      // margin: 0;
+      margin-left: 5%;
+      transform: translateX(-200%);
+      opacity: 0;
+      animation: slide-in-anim 2s ease-out forwards;
+    }
+
+    @keyframes slide-in-anim {
+      20% {
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(5%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+
     .size-work-archive-img {
       margin-top: 0;
     }
@@ -57,10 +82,11 @@
 
     .work-content {
       margin-bottom: 0;
+      max-width: 25rem;
     }
 
     .work-tools {
-      max-width: 20rem;
+      width: 20rem;
     }
   }
 }
@@ -69,7 +95,7 @@
 .single-portfolio-work {
   // margin-top: 5rem;
   img {
-    width: 30rem;
+    // width: 30rem;
     // height: 20rem;
     display: block;
     margin: 0 auto 3rem;

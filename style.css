@@ -412,7 +412,7 @@ h6 {
 h1 {
 	margin: 0;
 	font-size: 2.5rem;
-	padding: 3rem 0;
+	padding: 6rem 0 2rem;
 	text-align: center;
 }
 
@@ -1024,25 +1024,24 @@ svg {
 }
 .home .wp-block-button__link {
 	background-color: #fdfbe8;
-	color: #575757;
+	color: #ee4926;
 	font-weight: 600;
 	border: 2px solid #ee4926;
 	padding: 0.5rem;
 	font-size: 1rem;
 	margin-bottom: 3rem;
-	moz-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-	background-image: linear-gradient(#ffd72f, #ffe785, #ffeeab, #fdfbe8, #fdfbe8, #ffeeab, #ffe785, #ffd72f);
-	box-shadow: 0 4px 15px 0 #ee4926;
+	moz-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	box-shadow: 0 2px 15px 0 #ffd72f;
 }
-.home .wp-block-button__link:hover {
-	transform: scale(1);
-	background-position: 135px 100px;
-	moz-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
+.home .wp-block-button__link:hover,
 .home .wp-block-button__link:focus {
-	outline: none;
+	transform: scale(1);
+	color: #ee4926;
+	moz-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+	color: #fff;
+	background: linear-gradient(90deg, #ee4926, #ffd72f);
 }
 .home .wp-block-buttons {
 	display: flex;
@@ -1059,7 +1058,7 @@ svg {
 	margin-bottom: 30rem;
 }
 .home .contact-wrapper svg {
-	fill: #ee4926;
+	fill: #ffd72f;
 	height: 2.5rem;
 	width: 2.5rem;
 }
@@ -1080,7 +1079,7 @@ svg {
 		align-items: center;
 	}
 	.home .home-content p {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 	}
 	.home .contact-wrapper {
 		margin: 0;
@@ -1129,6 +1128,37 @@ svg {
 	transition: 0.2s ease-in-out;
 }
 @media screen and (min-width: 70em) {
+	.post-type-archive-portfolio-work .work-img {
+		margin-left: 5%;
+		transform: translateX(-200%);
+		opacity: 0;
+		-webkit-animation: slide-in-anim 2s ease-out forwards;
+		        animation: slide-in-anim 2s ease-out forwards;
+	}
+	@-webkit-keyframes slide-in-anim {
+		20% {
+			opacity: 0;
+		}
+		60% {
+			transform: translateX(5%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0%);
+		}
+	}
+	@keyframes slide-in-anim {
+		20% {
+			opacity: 0;
+		}
+		60% {
+			transform: translateX(5%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0%);
+		}
+	}
 	.post-type-archive-portfolio-work .size-work-archive-img {
 		margin-top: 0;
 	}
@@ -1139,14 +1169,14 @@ svg {
 	}
 	.post-type-archive-portfolio-work .work-content {
 		margin-bottom: 0;
+		max-width: 25rem;
 	}
 	.post-type-archive-portfolio-work .work-tools {
-		max-width: 20rem;
+		width: 20rem;
 	}
 }
 
 .single-portfolio-work img {
-	width: 30rem;
 	display: block;
 	margin: 0 auto 3rem;
 	border: 1px solid #888888;
@@ -1206,13 +1236,24 @@ svg {
 .page-id-47 .about-description {
 	max-width: 30rem;
 	padding: 3rem 1rem;
-	margin-bottom: 4rem;
+	margin-bottom: 5rem;
 	border-top: 1px solid #575757;
 	border-bottom: 1px solid #575757;
+}
+.page-id-47 .about-tools {
+	margin-bottom: 8rem;
 }
 .page-id-47 .tool-list {
 	max-width: 30rem;
 	margin: auto auto 5rem auto;
+}
+@media screen and (min-width: 50em) {
+	.page-id-47 .about-tools {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		margin-bottom: 5rem;
+	}
 }
 
 /* Contact Part

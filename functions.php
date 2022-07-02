@@ -103,7 +103,7 @@ function michiko_portfolio_setup() {
 
 	// Add Image Size
 	add_image_size( 'work-archive-img', 500, 300, true );
-	add_image_size( 'work-single-img', 1000, 600, true );
+	add_image_size( 'work-single-img', 900, 450, true );
 
 }
 add_action( 'after_setup_theme', 'michiko_portfolio_setup' );
@@ -156,7 +156,7 @@ function michiko_portfolio_scripts() {
 
 	wp_enqueue_script( 'michiko-portfolio-homepage-jquery', get_template_directory_uri() . '/js/jquery.js', array(), _S_VERSION, true );
 
-	wp_enqueue_script( 'michiko-portfolio-homepage', get_template_directory_uri() . '/js/homepage.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'michiko-portfolio-homepage-js', get_template_directory_uri() . '/js/homepage.js', array(), _S_VERSION, true );
 
 
 

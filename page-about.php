@@ -57,7 +57,7 @@ get_header();
 					};
 				}
 				?>
-				<section>
+				<section class="about-tools">
 				<!-- Diplaying the Development Tool  -->
 					<div>
 					<?php

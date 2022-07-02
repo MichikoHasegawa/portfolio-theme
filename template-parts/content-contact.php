@@ -17,7 +17,7 @@
 			<ul class="contact-social-icons">
 				<li><a href="https://www.linkedin.com/in/michiko-hasegawa/"><?php get_template_part('images/linkedin'); ?></a></li>
 				<li><a href="mailto:mitchiko.h@gmail.com"><?php get_template_part('images/email'); ?></a></li>
-				<li><a href="https://github.com/MichikoHasegawa"><?php get_template_part('images/github'); ?></a></li>
+				<li><a href="https://github.com/MichikoHasegawa?tab=repositories"><?php get_template_part('images/github'); ?></a></li>
 			</ul>
 		</div>
 	</div><!-- .entry-content -->
