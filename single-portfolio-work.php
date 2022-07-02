@@ -86,7 +86,8 @@ get_header();
 				</section>
 <!------------------------------------------------------------------>
 				<section class="single-work-steps">
-					<!-- <div class="single-work-step"> -->
+					
+					<!-- ------------------------ -->
 					<?php
 						if (get_field('wireframe_img') || get_field('wireframe_link')) {
 							?>
@@ -157,9 +158,42 @@ get_header();
 							</div>
 							<?php
 						} 
-						?>
-						<!-- ---------------------------------------  -->
-						<?php
+						
+						// ---------------------------
+						if (get_field('style_img') || get_field('style_link')) {
+							?>
+							<!-- Display Heading: Style Guide -->
+							<div class="single-work-step">
+								<h2><?php esc_html_e( 'Style Guide', 'michiko-portfolio' ); ?></h2>
+								<?php
+							
+								// Display Style Guide Image (ID)
+								$style_img = get_field('style_img');
+								$style_size = 'work-archive-img';
+								$style_link = get_field('style_link');
+								
+								if($style_link){
+									$style_url = $style_link['url'];
+									$style_title = $style_link['title'];
+									$style_target = $style_link['target'] ? $style_link['target'] : '_self';
+								}
+								
+								if( $style_img ) {
+									?>
+									<?php echo wp_get_attachment_image( $style_img, $style_size ); ?>
+									<?php
+								}
+							
+								// Display Style Link
+								?>
+								<div class="link">
+										<a href="<?php echo esc_url($style_url); ?>"target="<?php echo esc_attr($style_target); ?>"><?php esc_html_e( 'View Style Guide', 'michiko-portfolio' ); ?></a>
+								</div>
+							</div>
+							<?php
+							} 
+
+							// ------------------------------------
 						if (get_field('development_img')) {
 						?>
 						<div class="single-work-step">
@@ -183,17 +217,9 @@ get_header();
 								<!-- Live Site Link -->
 								<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php esc_html_e( 'Live Site', 'michiko-portfolio' ); ?></a>
 							</div>	
-							</div>
-
-
-
-
-
-
-
+						</div>
 						<?php 
 						} ?>
-					<!-- </div> -->
 				</section>
 				<?php
 				
