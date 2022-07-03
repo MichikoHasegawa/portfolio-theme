@@ -13,6 +13,10 @@
     background-color: $white;
   }
 
+  .work-img {
+    padding: 0 1rem;
+  }
+
   .size-work-archive-img {
     // padding: 3rem 1rem 1rem 1rem;
     margin: 3rem 0 1rem;
@@ -25,6 +29,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 0 0 4rem;
     min-width: 20rem;
   }
@@ -45,32 +50,26 @@
     transition: 0.2s ease-in-out;
   }
 
-  @media screen and (min-width: 70em) {
-    .work-img {
-      // font-family: "arial black";
-      // font-size: 60px;
-      // text-align: center;
-      // padding: 0;
-      // margin: 0;
-      margin-left: 5%;
-      transform: translateX(-200%);
+  .work-img {
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-anim 2s ease-out forwards;
+  }
+
+  @keyframes slide-in-anim {
+    20% {
       opacity: 0;
-      animation: slide-in-anim 2s ease-out forwards;
     }
-
-    @keyframes slide-in-anim {
-      20% {
-        opacity: 0;
-      }
-      60% {
-        transform: translateX(5%);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0%);
-      }
+    60% {
+      transform: translateX(5%);
     }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 
+  @media screen and (min-width: 50em) {
     .size-work-archive-img {
       margin-top: 0;
     }
@@ -82,7 +81,7 @@
 
     .work-content {
       margin-bottom: 0;
-      max-width: 25rem;
+      width: 24rem;
     }
 
     .work-tools {
@@ -93,13 +92,9 @@
 
 // Work Single Page
 .single-portfolio-work {
-  // margin-top: 5rem;
   img {
-    // width: 30rem;
-    // height: 20rem;
     display: block;
     margin: 0 auto 3rem;
-    // padding-top: 2rem;
     border: 1px solid $gray;
   }
 
@@ -135,16 +130,18 @@
   }
 
   h2 {
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
   .single-work-steps {
     margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .single-work-step:first-child {
-  //   margin-bottom: 7rem;
-  // }
   .single-work-descriotion {
     margin-top: 5rem;
   }

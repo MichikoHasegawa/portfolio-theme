@@ -18,40 +18,59 @@ get_header();
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'michiko-portfolio' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'michiko-portfolio' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$michiko_portfolio_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'michiko-portfolio' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$michiko_portfolio_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Please go back to home or view my work!.' ); ?></p>
 			</div><!-- .page-content -->
+
+
+
+
+
+			<div>
+			<h2 class="page-title"><?php esc_html_e( 'View My Work', 'michiko-portfolio' ); ?></h2>
+			<div class="work-content">
+				<?php
+			$args = array(
+				'post_type'     => 'portfolio-work',
+				'post_per_page' => -1,
+			);
+
+			$query = new WP_Query( $args );
+			if( $query -> have_posts() ) {
+				?>
+				<?php
+				while( $query->have_posts()) {
+					$query->the_post();
+					?>
+					
+						
+						
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+						
+						<?php
+				} ?>
+				</div>
+				<?php
+				
+				wp_reset_postdata();
+
+			};
+
+			// get_template_part( 'template-parts/content', 'contact' );
+
+		// else :
+
+		// 	get_template_part( 'template-parts/content', 'none' );
+
+		// endif;
+
+		?>
+
+			</div>
+
+
+
+
+
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->

@@ -1,0 +1,26 @@
+.error404 {
+  h2 {
+    margin: 4rem auto 3rem;
+  }
+
+  .work-content {
+    margin-bottom: 5rem;
+  }
+
+  .work-content h3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      border-bottom: 2px solid $red;
+    }
+
+    a:hover,
+    a:focus {
+      border-bottom: 2px solid $yellow;
+    }
+  }
+}
