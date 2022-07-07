@@ -803,6 +803,7 @@ body {
 
 .site-header {
 	background-color: #fdfbe8;
+	z-index: 1;
 	padding: 1rem;
 	position: fixed;
 	bottom: 0;
@@ -817,7 +818,8 @@ body {
 }
 .site-header a {
 	color: #ee4926;
-	font-weight: 700;
+	font-weight: 800;
+	font-family: BioRhyme;
 	font-size: 1.1rem;
 }
 
@@ -873,6 +875,7 @@ svg {
 	}
 	.site-info {
 		text-align: center;
+		margin-left: 9rem;
 	}
 	.site-info a {
 		color: #fff;

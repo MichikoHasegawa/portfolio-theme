@@ -72,8 +72,8 @@ get_header();
 						<?php
 						}
 						?>
-						</div>
-						<?php
+					</div>
+					<?php
 
 					// Display Discriptions
 					if (function_exists ( 'get_field')) {
@@ -212,11 +212,11 @@ get_header();
 								// Display GitHub Link
 								?>
 								<div class="link">
-								<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php esc_html_e( 'Github', 'michiko-portfolio' ); ?></a>
-							
-								<!-- Live Site Link -->
-								<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php esc_html_e( 'Live Site', 'michiko-portfolio' ); ?></a>
-							</div>	
+									<a href="<?php echo esc_url($github_url); ?>"target="<?php echo esc_attr($github_target); ?>"><?php esc_html_e( 'Github', 'michiko-portfolio' ); ?></a>
+								
+									<!-- Live Site Link -->
+									<a  href="<?php echo esc_url($live_url); ?>"target="<?php echo esc_attr($live_target); ?>"><?php esc_html_e( 'Live Site', 'michiko-portfolio' ); ?></a>
+								</div>	
 						</div>
 						<?php 
 						} ?>

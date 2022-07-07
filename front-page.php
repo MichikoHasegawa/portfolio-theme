@@ -33,22 +33,17 @@ get_header();
 				<div class="home-content">
 					<?php
 					the_content();
-					?>
-					
-					<?php
-
+				
 					wp_link_pages(
 						array(
 							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'michiko-portfolio' ),
 							'after'  => '</div>',
 						)
 					);
-					?>
-				
-				<?php get_template_part( 'template-parts/content', 'socialicons' ); ?>
+					
+					get_template_part( 'template-parts/content', 'socialicons' ); ?>
 				</div>
 			</div><!-- .entry-content -->
-			
 		</article><!-- #post-<?php the_ID(); ?> -->
 
 
@@ -62,7 +57,5 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 	</main><!-- #main -->
-	
-
 <?php
 get_footer();

@@ -21,59 +21,35 @@ get_header();
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Please go back to home or view my work!.' ); ?></p>
 			</div><!-- .page-content -->
 
-
-
-
-
 			<div>
-			<h2 class="page-title"><?php esc_html_e( 'View My Work', 'michiko-portfolio' ); ?></h2>
-			<div class="work-content">
-				<?php
-			$args = array(
-				'post_type'     => 'portfolio-work',
-				'post_per_page' => -1,
-			);
+				<h2 class="page-title"><?php esc_html_e( 'View My Work', 'michiko-portfolio' ); ?></h2>
+				<div class="work-content">
+					<?php
+				$args = array(
+					'post_type'     => 'portfolio-work',
+					'post_per_page' => -1,
+				);
 
-			$query = new WP_Query( $args );
-			if( $query -> have_posts() ) {
-				?>
-				<?php
-				while( $query->have_posts()) {
-					$query->the_post();
+				$query = new WP_Query( $args );
+				if( $query -> have_posts() ) {
 					?>
-					
-						
-						
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
-						
-						<?php
-				} ?>
+					<?php
+					while( $query->have_posts()) {
+						$query->the_post();
+						?>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+							
+							<?php
+					} ?>
 				</div>
 				<?php
 				
 				wp_reset_postdata();
 
-			};
-
-			// get_template_part( 'template-parts/content', 'contact' );
-
-		// else :
-
-		// 	get_template_part( 'template-parts/content', 'none' );
-
-		// endif;
-
+				};
 		?>
-
 			</div>
-
-
-
-
-
 		</section><!-- .error-404 -->
-
 	</main><!-- #main -->
-
 <?php
 get_footer();

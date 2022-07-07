@@ -13,10 +13,8 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( '<a href="https://michikohasegawa.com/">&copy; Michiko Hasegawa</a>' );
-			?>
+		<a href="https://michikohasegawa.com/">&copy; <?php echo date("Y") ?> Michiko Hasegawa</a>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

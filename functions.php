@@ -148,21 +148,14 @@ function michiko_portfolio_scripts() {
 	wp_style_add_data( 'michiko-portfolio-style', 'rtl', 'replace' );
 
 
-
-
-
-
+	// JS files
 	wp_enqueue_script( 'michiko-portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'michiko-portfolio-homepage-jquery', get_template_directory_uri() . '/js/jquery.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'michiko-portfolio-homepage-js', get_template_directory_uri() . '/js/homepage.js', array(), _S_VERSION, true );
 
-
-
-
-
-
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -170,7 +163,7 @@ function michiko_portfolio_scripts() {
 
 	wp_enqueue_style(
 		'fwd-google-fonts', // unique handle
-		'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swaBioRhymep', // path to css file, 
+		'https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:wght@400;700&display=swap', // path to css file, 
 		array(), // dependancies
 		null, // version (null required for Google Fonts)
 		'all', // media

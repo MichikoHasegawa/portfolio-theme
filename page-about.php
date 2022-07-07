@@ -29,11 +29,6 @@ get_header();
 			// }
 		endwhile; // End of the loop.
 
-
-
-
-
-
 		$args = array(
 			'pagename'     => 'about',
 		);

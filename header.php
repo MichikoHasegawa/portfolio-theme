@@ -15,6 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Michiko Hasegawa Portfolio" content="I’m a junior front-end developer, and graduate of the BCIT’s Front-End Web Developer Program with hands-on experience designing and developing responsive websites and applications from scratch.">
+	<meta name="description" content="meta description for the content of the website" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
