@@ -510,6 +510,9 @@ body .site-info {
 	min-height: 100vh;
 	width: 100%;
 	background-color: #fdfbe8;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
 main {
@@ -518,8 +521,15 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	flex-grow: 1;
 }
 
+@media screen and (min-width: 90em) {
+	.site {
+		min-height: unset;
+		height: unset;
+	}
+}
 hr {
 	background-color: #ccc;
 	border: 0;

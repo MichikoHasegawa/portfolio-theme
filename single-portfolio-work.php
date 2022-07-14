@@ -153,7 +153,7 @@ get_header();
 										<a href="<?php echo esc_url($prototype_url); ?>"target="<?php echo esc_attr($Prototype_target); ?>"><?php esc_html_e( 'View Prototype', 'michiko-portfolio' ); ?></a>
 
 										
-    									<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+    									<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $Prototype_target ); ?>"><?php echo esc_html( $Prototype_title ); ?></a>
 								</div>
 							</div>
 							<?php
